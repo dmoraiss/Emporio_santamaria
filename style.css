@@ -1,0 +1,425 @@
+/* ========================================
+   VARIÁVEIS E ESTILOS GLOBAIS
+   ======================================== */
+
+:root {
+    --cor-vermelho: #8B0000;
+    --cor-ouro: #FFD700;
+    --cor-escuro: #2c2c2c;
+    --cor-claro: #f5f5f5;
+    --cor-branco: #ffffff;
+    --transicao: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-escuro);
+    background-color: var(--cor-claro);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   NAVEGAÇÃO
+   ======================================== */
+
+.navbar {
+    background-color: var(--cor-vermelho);
+    color: var(--cor-branco);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-ouro);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    transition: var(--transicao);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--cor-ouro);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-branco);
+    margin: 5px 0;
+    transition: var(--transicao);
+}
+
+.mobile-menu {
+    display: none;
+    background-color: var(--cor-vermelho);
+    padding: 1rem;
+    text-align: center;
+}
+
+.mobile-menu a {
+    display: block;
+    color: var(--cor-branco);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: var(--transicao);
+}
+
+.mobile-menu a:hover {
+    color: var(--cor-ouro);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    
+    background: linear-gradient(135deg, var(--cor-vermelho) 0%, #a50000 100%);
+    color: var(--cor-branco);
+    padding: 300px 20px;
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: var(--cor-ouro);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicao);
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--cor-ouro);
+    color: var(--cor-vermelho);
+}
+
+.btn-primary:hover {
+    background-color: #ffd700;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* ========================================
+   SEÇÃO SOBRE
+   ======================================== */
+
+.sobre {
+    padding: 80px 20px;
+    background-color: var(--cor-branco);
+}
+
+.sobre h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--cor-vermelho);
+}
+
+.sobre-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.sobre-item {
+    background-color: var(--cor-claro);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--cor-ouro);
+    transition: var(--transicao);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.sobre-item h3 {
+    color: var(--cor-vermelho);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.sobre-item p {
+    color: var(--cor-escuro);
+    line-height: 1.8;
+}
+
+/* ========================================
+   SEÇÃO HORÁRIOS
+   ======================================== */
+
+.horarios {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--cor-claro) 0%, #e8e8e8 100%);
+}
+
+.horarios h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--cor-vermelho);
+}
+
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.horario-card {
+    background-color: var(--cor-branco);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--cor-ouro);
+    transition: var(--transicao);
+}
+
+.horario-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.horario-card h3 {
+    color: var(--cor-vermelho);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.horario-time {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--cor-ouro);
+    margin-bottom: 0.5rem;
+}
+
+.horario-desc {
+    color: var(--cor-escuro);
+    font-size: 0.95rem;
+}
+
+.observacao {
+    text-align: center;
+    background-color: var(--cor-branco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--cor-vermelho);
+    color: var(--cor-escuro);
+}
+
+/* ========================================
+   SEÇÃO ENTRE EM CONTATO COM NOS
+   ======================================== */
+
+.contato {
+    padding: 80px 20px;
+    background-color: var(--cor-branco);
+}
+
+.contato h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--cor-vermelho);
+}
+
+.contato-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contato-item {
+    background-color: var(--cor-claro);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transicao);
+}
+
+.contato-item:hover {
+    background-color: var(--cor-ouro);
+    color: var(--cor-vermelho);
+}
+
+.contato-item h3 {
+    color: var(--cor-vermelho);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.contato-item p {
+    color: var(--cor-escuro);
+}
+
+.contato-item a {
+    color: var(--cor-vermelho);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicao);
+}
+
+.contato-item a:hover {
+    text-decoration: underline;
+    color: #8B0000;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    background-color: var(--cor-vermelho);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Navegação Mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+    /* Hero */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 60px 20px;
+        min-height: 350px;
+    }
+
+    /* Seções */
+    .sobre h2,
+    .horarios h2,
+    .contato h2 {
+        font-size: 2rem;
+    }
+
+    .sobre,
+    .horarios,
+    .contato {
+        padding: 50px 20px;
+    }
+
+    .sobre-content,
+    .horarios-grid,
+    .contato-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .sobre h2,
+    .horarios h2,
+    .contato h2 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
