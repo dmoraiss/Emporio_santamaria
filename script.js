@@ -109,4 +109,4 @@ window.addEventListener('scroll', function() {
 // ========================================
 
 console.log('✅ Landing page carregada com sucesso!');
- // final do codgio 
+ // final do codgio //
