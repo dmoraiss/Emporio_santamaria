@@ -116,7 +116,6 @@ body {
    ======================================== */
 
 .hero {
-    
     background: linear-gradient(135deg, var(--cor-vermelho) 0%, #a50000 100%);
     color: var(--cor-branco);
     padding: 300px 20px;
@@ -275,7 +274,7 @@ body {
 }
 
 /* ========================================
-   SEÇÃO ENTRE EM CONTATO 
+   SEÇÃO ENTRE EM CONTATO
    ======================================== */
 
 .contato {
@@ -352,7 +351,6 @@ body {
    ======================================== */
 
 @media (max-width: 768px) {
-    /* Navegação Mobile */
     .hamburger {
         display: flex;
     }
@@ -365,7 +363,6 @@ body {
         display: block;
     }
 
-    /* Hero */
     .hero-content h1 {
         font-size: 2rem;
     }
@@ -379,7 +376,6 @@ body {
         min-height: 350px;
     }
 
-    /* Seções */
     .sobre h2,
     .horarios h2,
     .contato h2 {

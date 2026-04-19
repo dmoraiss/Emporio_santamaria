@@ -6,7 +6,6 @@ const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
 // Abrir/fechar menu mobile
-
 hamburger.addEventListener('click', function() {
     mobileMenu.classList.toggle('active');
     
