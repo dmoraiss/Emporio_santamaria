@@ -115,15 +115,18 @@ body {
    HERO SECTION
    ======================================== */
 
-.hero {
-    background: linear-gradient(135deg, var(--cor-vermelho) 0%, #a50000 100%);
+   .hero {
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('logotipo.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
     color: var(--cor-branco);
-    padding: 300px 20px;
     text-align: center;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 100px 20px;
 }
 
 .hero-content h1 {
