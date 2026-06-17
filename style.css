@@ -280,6 +280,13 @@ body {
    SEÇÃO ENTRE EM CONTATO
    ======================================== */
 
+   .textoo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   }
+
 .contato {
     padding: 80px 20px;
     background-color: var(--cor-branco);
